@@ -1,0 +1,441 @@
+@charset "utf-8";
+/*
+    TABLE OF CONTENT
+    ===========================================
+    1. Header
+    2. Payment info
+    3. Tap General:
+      *Tab - Credit/Debit Cards
+      *Tab - Over The Counter
+      *Tab - Bank Channels
+      *Tab - Installment Payment
+*/
+
+/* ========= Header START ========== */
+#logo {
+    background-image: url('../../images/2c2p.png');
+    background-size: 168px;
+    height: 60px;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+#polyglotLanguageSwitcher a.current:link, #polyglotLanguageSwitcher a.current:visited, #polyglotLanguageSwitcher a.current:active {
+    background-color: #FFF;
+}
+#polyglotLanguageSwitcher ul.dropdown {
+    background-color: #FFF;
+}
+.navbar-inner {
+    background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);/* FF3.6+ */
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));/* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);/* Chrome10+, Safari5.1+ */
+    background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);/* W3C */
+    background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+}
+.navbar .menu-tools {
+    height: 60px;
+    padding:10px 0px 10px 20px
+}
+.navbar .container {}
+.navbar .navbar-inner .container .nav > li > a {
+    display: inline-block;
+    color: gray;
+}
+/* ========= Header END ========== */
+
+/* ========= Payment Info START ========== */
+.subhead {
+    background-color: #fff;
+    -webkit-box-shadow:	0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:	0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow:			0 1px 2px rgba(0, 0, 0, 0.3);
+    /*background-image: url(../../images/bg/bg_subhead.gif);
+    background-repeat: repeat-y;
+    background-position: 729px 0;*/
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+.payment-detail {
+    float: left;
+    width: 730px;
+    padding: 15px 0 25px;
+}
+.payment-detail .picture {
+    float: left;
+    width: 200px;
+    padding: 10px 0 0;
+    text-align: center;
+}
+.payment-detail .detail {
+    float: left;
+    width: 529px;
+}
+.payment-detail .detail>p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.payment-detail .detail>h1 {
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0 0 18px;
+}
+.payment-detail .detail>ul {
+    margin: 0 0 15px;
+    padding: 0 0 10px;
+    background: url(../../images/bg/bg_line-payment-detail.png) no-repeat bottom left;
+}
+.payment-detail .detail>ul li {
+    font-size: 13px;
+    position: relative;
+    list-style: none;
+}
+.payment-detail .detail>ul li label {
+    font-size: 13px;
+    cursor: default;
+    min-width: 160px;
+    display: inline-block;
+}
+.payment-detail .detail .address {font-size: 13px;}
+.payment-detail .detail .address-contact {font-size: 13px;}
+.payment-detail .detail .address p { margin: 0 0 3px;}
+/* ========= Payment Info END ========== */
+
+/* ========= QR Payment Code START ========== */
+
+#qrLoadingDiv {
+    color: #0f98cb;
+    text-align: center;
+}
+
+.qrLoading {
+    min-height: 200px;
+    background: url(../../images/processing.gif) no-repeat center center;
+}
+
+.qwik-qrcode {
+    float: right;
+    width: 250px;
+    padding: 15px 0 25px;
+}
+.ctn {
+    margin: 0 auto;
+}
+
+.ctn .qr-ctn {
+    margin: 10px;
+}
+
+/* ========= QR Payment Code START ========== */
+
+
+/* ========= Tap General START ========== */
+.wrapper-tab .nav-tabs {
+    border: none;
+    overflow: hidden;
+    margin: 0;
+}
+.wrapper-tab .nav-tabs>li {
+    width: 200px;
+    height: 57px;
+    background: url(../../images/bg/bg_tab.png) bottom left no-repeat;
+    margin: 0;
+}
+.wrapper-tab .nav-tabs>li:first-child {background: url(../../images/bg/bg_tab-first.png) bottom left no-repeat;}
+.wrapper-tab .nav-tabs>li:last-child {background: url(../../images/bg/bg_tab-last.png) bottom left no-repeat;}
+.wrapper-tab .nav-tabs>li.active {
+    background: url(../../images/bg/bg_tab-active.png) bottom left no-repeat;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.wrapper-tab .nav-tabs>li:last-child.active {background: url(../../images/bg/bg_tab-active-last.png) bottom left no-repeat;}
+.wrapper-tab .nav-tabs>li a {
+    height: 57px;
+    padding: 0 15px;
+    line-height: 57px;
+    border: none;
+    color: #555;
+}
+.wrapper-tab .nav-tabs>li a:hover,
+.wrapper-tab .nav-tabs>.active> a { background: none; border: none; color: #1682be; outline: none;}
+
+.wrapper-tabcontent {
+    border-bottom: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    background: #fff;
+}
+
+
+label.error {
+    display: none;
+    width: 20px;
+    height: 20px;
+    cursor: default;
+    background: url(../../images/bg/bg_error.png) center bottom no-repeat;
+    text-indent: -9999px;
+    vertical-align: middle;
+    display:inline-block;
+    margin-left:4px;
+}
+label.valid {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: url(../../images/bg/bg_valid.png) center bottom no-repeat;
+    text-indent: -9999px;
+    vertical-align: middle;
+    cursor: default;
+    display:inline-block;
+}
+label.text-error {
+    display: block;
+    margin-top: -5px;
+    font-weight: normal;
+    color: red;
+    cursor: default;
+}
+.error input, .error select, .error textarea {
+    color: #b94a48;
+    border-color: #b94a48;
+    position: relative;
+}
+input.error, select.error, textarea.error
+{
+    color: #b94a48;
+    border-color: #b94a48;
+}
+.success label.valid { display: inline-block;}
+.error label.error { display: inline-block;}
+.error label.text-error { display: block;}
+
+.tab-content .row-fluid {padding-bottom: 10px;}
+.tab-content .row-fluid .form-inline {padding-bottom: 10px;}
+.wrapper-box {padding: 30px 30px 15px;}
+.wrapper-box>h2 { font-size: 20px; font-weight: normal; padding-bottom: 10px;}
+
+.form-actions {
+    background: none;
+    border: none;
+    margin: 0;
+    text-align: center;
+    padding: 15px 0 0;
+}
+
+
+.btn-primary {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #00bc08;
+    background-image: -moz-linear-gradient(top, #00bc08, #039502);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00bc08), to(#039502));
+    background-image: -webkit-linear-gradient(top, #00bc08, #039502);
+    background-image: -o-linear-gradient(top, #00bc08, #039502);
+    background-image: linear-gradient(to bottom, #00bc08, #039502);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00bc08', endColorstr='#ff039502', GradientType=0);
+    border-color: #10c713 #016b00 #016300;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #0044cc;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.inputbtn {
+    height: 35px !important;
+    line-height: 25px;
+    /*-moz-border-radius:2px;*/
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.btn {
+    height: 25px !important;
+    line-height: 25px;
+}
+
+
+
+/* ========= Tap General END ========== */
+
+/* ========= Tab - Credit/Debit Cards START ========== */
+.logo-credit-cards {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.logo-credit-cards p {float: left; margin-top: 5px;}
+.logo-credit-cards ul {
+    float: left;
+    margin-left: 10px;
+}
+/* ========= Tab - Credit/Debit Cards END ========== */
+
+/* ========= Tab - Over The Counter START ========== */
+.logo-counter-new ul {
+    float: left;
+    margin-left: 0px;
+    list-style:none;
+}
+.logo-counter-new ul li {
+    float:left;
+    background-repeat: no-repeat;
+    height: 35px;
+    margin-right: 10px;
+
+    /*background-image: url(../images/123/7ELEVEN.png);*/
+
+}
+.logo-counter-new ul li a{
+    float:left;
+}
+.logo-counter-new .agentlogo {  }
+
+.logo-counter {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.logo-counter ul {
+    float: left;
+    margin-left: 0px;
+}
+/* ========= Tab - Over The Counter END ========== */
+
+/* ========= Tab - Bank Channels START ========== */
+.logo-bank {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.logo-bank ul {
+    float: left;
+    margin-left: 0;
+}
+.logo-bank ul li {
+    float: left;
+    height: 37px;
+    list-style: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-indent: -9999px;
+    background-image: url(../../images/bg/bg_bank.png);
+    background-position: 0 0;
+    margin-right: 10px;
+}
+.logo-bank-new ul {
+    float: left;
+    margin-left: 0px;
+    list-style:none;
+}
+.logo-bank-new ul li {
+    float:left;
+    background-repeat: no-repeat;
+    height: 37px;
+    margin-right: 10px;
+    margin-bottom:5px;
+    /*background-image: url(../images/123/7ELEVEN.png);*/
+
+}
+.logo-bank-new ul li a{
+    float:left;
+}
+.logo-bank-new .agentlogo {  }
+
+.customspan
+{
+    width:378px !important;}
+/* ========= Tab - Bank Channels END ========== */
+
+
+/* ========= Tab - Installment Payment START ========== */
+.ipp-options-panel {
+    width:600px;
+    border:1px solid rgba(0, 0, 0, 0.3);
+    padding:7px;
+    margin-bottom:7px;
+
+}
+.ipp-options-panel ul li {
+    list-style:none;
+}
+
+
+.logo-ippbank {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-top:7px;
+}
+.logo-ippbank ul {
+    /*float: left;*/
+    margin-left: 0;
+}
+.logo-ippbank ul li {
+    float: left;
+    height: 36px;
+    list-style: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-indent: -9999px;
+    /*background-image: url(../../images/bg/bg_bank.png);*/
+    background-position: 0 0;
+    margin-right: 10px;
+    background-repeat:no-repeat;
+    /*width: 109px;*/
+
+}
+.logo-ippbank .off {background-position: 0 -36px;}
+
+/* ========= Tab - Installment Payment END ========== */
+
+
+
+/*============ Tab -Wallets Payment START ==================*/
+
+.logo-wallets-pay {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+    margin-top:7px;
+}
+.logo-wallets-pay ul {
+    /*float: left;*/
+    margin-left: 0;
+}
+.logo-wallets-pay ul li {
+    float: left;
+    height: 36px;
+    list-style: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    /*text-indent: -9999px;*/
+    /*background-image: url(../../images/bg/bg_bank.png);*/
+    background-position: 0 0;
+    margin-right: 10px;
+    background-repeat:no-repeat;
+    /*width: 109px;*/
+
+}
+
+.logo-wallets-pay ul li a{
+    float:left;
+}
+.logo-wallets-pay .off {background-position: 0 -36px;}
+
+
+/*========== Tab - Wallets Payment END*/
+
+

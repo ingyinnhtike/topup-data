@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "bootstrap-confirmation2@^2.4.0",
+        "scope": null,
+        "escapedName": "bootstrap-confirmation2",
+        "name": "bootstrap-confirmation2",
+        "rawSpec": "^2.4.0",
+        "spec": ">=2.4.0 <3.0.0",
+        "type": "range"
+      },
+      "/opt/lampp/htdocs/dolphin"
+    ]
+  ],
+  "_from": "bootstrap-confirmation2@>=2.4.0 <3.0.0",
+  "_id": "bootstrap-confirmation2@2.4.0",
+  "_inCache": true,
+  "_location": "/bootstrap-confirmation2",
+  "_nodeVersion": "5.6.0",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/bootstrap-confirmation2-2.4.0.tgz_1475219748860_0.15752468770369887"
+  },
+  "_npmUser": {
+    "name": "mistic100",
+    "email": "contact@git.strangeplanet.fr"
+  },
+  "_npmVersion": "3.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "bootstrap-confirmation2@^2.4.0",
+    "scope": null,
+    "escapedName": "bootstrap-confirmation2",
+    "name": "bootstrap-confirmation2",
+    "rawSpec": "^2.4.0",
+    "spec": ">=2.4.0 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-confirmation2/-/bootstrap-confirmation2-2.4.0.tgz",
+  "_shasum": "260fe9f20f2be69819b44ad2b4d23544a1655a51",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-confirmation2@^2.4.0",
+  "_where": "/opt/lampp/htdocs/dolphin",
+  "authors": [
+    {
+      "name": "Nimit Suwannagate",
+      "email": "ethaizone@hotmail.com"
+    },
+    {
+      "name": "Damien \"Mistic\" Sorel",
+      "email": "contact@git.strangeplanet.fr",
+      "homepage": "http://www.strangeplanet.fr"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/mistic100/Bootstrap-Confirmation/issues"
+  },
+  "dependencies": {
+    "bootstrap": ">=3.2.0"
+  },
+  "description": "Bootstrap plugin for on-place confirm boxes using Popover",
+  "devDependencies": {
+    "grunt": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-open": "^0.2.3",
+    "grunt-replace": "^1.0.1",
+    "jit-grunt": "^0.10.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "260fe9f20f2be69819b44ad2b4d23544a1655a51",
+    "tarball": "https://registry.npmjs.org/bootstrap-confirmation2/-/bootstrap-confirmation2-2.4.0.tgz"
+  },
+  "gitHead": "1575968511276b150fd666b6564ecde28724fe4b",
+  "homepage": "http://mistic100.github.io/Bootstrap-Confirmation",
+  "keywords": [
+    "bootstrap",
+    "confirmation",
+    "popup"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "mistic100",
+      "email": "contact@git.strangeplanet.fr"
+    }
+  ],
+  "name": "bootstrap-confirmation2",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mistic100/Bootstrap-Confirmation.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "2.4.0"
+}

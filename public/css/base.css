@@ -1,0 +1,998 @@
+@charset "utf-8";
+/*
+    web base.css
+    TABLE OF CONTENT
+    ===========================================
+	Main:
+    1. Header
+    2. Body
+    3. Icons
+    4. Footer
+    5. Modal
+    6. Paing Added
+
+	Additional:
+    1. Fix for some browsers
+    2. Promotion
+    3. Other Logo
+    4. Label Error
+    5. Box Payment
+    6. Print
+    7. Button
+    8. Text
+    9. Other
+*/
+
+/* ========= Header START ========== */
+#brand-link
+{
+    display: block;
+}
+#brand-nolink
+{
+    display: none;
+}
+
+#logo {
+    background-image: url('../../images/2c2p.png');
+    background-size: 168px;
+    height: 60px;
+    width: 169px;
+    background-repeat: no-repeat;
+}
+
+#aboutModal {
+    width: 750px;
+}
+
+#aboutModal .modal-body {
+    max-height: 420px;
+}
+.langbar {
+    margin: 0;
+    padding: 0;
+}
+.langbar>li
+{
+    list-style: none;
+    float: right;
+    margin: 0 3px;
+}
+
+.langbar > li > a
+{
+
+}
+
+.langbar>li> a.selected img {
+    border: solid 1px #c6c6c6;
+    height: 20px;
+}
+
+.langbar>li>a:not(.selected) img{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE6-9 */
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+
+    border: solid 1px #c6c6c6;
+    height: 20px;
+}
+/* ========= Header END ========== */
+
+/* ========= Body START ========== */
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #575757;
+    background-color: #ebebeb;
+}
+
+.container {width: 1000px !important;}
+.navbar {min-width: 1024px !important;}
+.navbar .navbar-inner .container .nav {margin-top: 5px; margin-right: -15px; float: right;}
+.navbar .navbar-inner .container .nav > li > a { display: inline-block;}
+
+.navbar .menu-tools {
+    height: 40px;
+    padding:10px 0px 10px 20px
+}
+.help-inline {font-size: 12px;}
+
+/* ========= Body END ========== */
+
+/* ========= Icons START ========== */
+/* main tab icons */
+.icn-credit-cards, .icn-bar, .icn-card-safe, .icn-local-payment {
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+    background-image: url(../../images/bg/bg_main.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.icn-credit-cards {background-position: 0 0;}
+.icn-bar {background-position: 0 -30px;}
+.icn-card-safe {background-position: 0 -60px;}
+.icn-local-payment {background-position: 0 -90px;}
+
+/* credit card icons */
+.logo-credit-cards ul li {
+    float: left;
+    width: 53px;
+    height: 35px;
+    list-style: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-indent: -9999px;
+    background-image: url(../../images/bg/bg_card.png);
+    background-position: 0 0;
+}
+.logo-credit-cards .visa { background-position: 0 0;}
+.logo-credit-cards .visa.off { background-position: 0 -35px;}
+.logo-credit-cards .mastercard {background-position: -53px 0;}
+.logo-credit-cards .mastercard.off {background-position: -53px -35px;}
+.logo-credit-cards .jcb {background-position: -106px 0;}
+.logo-credit-cards .jcb.off {background-position: -106px -35px;}
+.logo-credit-cards .amex {background-position: -159px 0;}
+.logo-credit-cards .amex.off {background-position: -159px -35px;}
+.logo-credit-cards .unionpay {background-position: -212px 0;}
+.logo-credit-cards .unionpay.off {background-position: -212px -35px;}
+.logo-credit-cards .diners_club_international {background-position: -265px 0;}
+.logo-credit-cards .diners_club_international.off {background-position: -265px -35px;}
+.logo-credit-cards .mpucard {background-position: -317px 0;}
+.logo-credit-cards .mpucard.off {background-position: -317px -35px;}
+.logo-credit-cards .discover {background-position: -369px 0;}
+.logo-credit-cards .discover.off {background-position: -369px -35px;}
+.logo-credit-cards .uatp {background-position: -421px 0;}
+.logo-credit-cards .uatp.off {background-position: -421px -35px;}
+/* ========= Logos END ========== */
+
+/* ========= Footer START ========== */
+.footer {
+    padding: 10px 0;
+    color: #6b6b6b;
+    text-align: center;
+    font-size: 11px;
+}
+/* ========= Brand LOGOs ========== */
+.logo-wrapper {
+    float: right;
+    display: block;
+    width: 320px;
+    height: 35px;
+    background-size: cover;
+    background: url("../../images/bg/bg_scheme.png") top left no-repeat;
+    background-position: 0px -20px;
+}
+
+/* ========= Footer END ========== */
+
+/* ========= Modal START ========== */
+.modal {
+    width: auto;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    margin-left: -400px;
+}
+.modal-body {
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    max-height: inherit;
+}
+.progress {height: 12px; margin-bottom: 50px;}
+
+.box-loading {
+    width: 650px;
+    padding: 115px 75px 95px;
+    background-color: #fff;
+    background-image: -moz-linear-gradient(top, #fff, #e0e0e0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e0e0e0));
+    background-image: -webkit-linear-gradient(top, #fff, #e0e0e0);
+    background-image: -o-linear-gradient(top, #fff, #e0e0e0);
+    background-image: linear-gradient(to bottom, #fff, #e0e0e0);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+.box-loading {text-align: center;}
+.box-loading h2 { font-size: 36px; font-weight: normal; margin: 0 0 15px; padding: 0;}
+.box-loading p { font-size: 14px;}
+
+.box-modal {
+    width: 711px;
+    height: 440px;
+    padding: 140px 45px 77px;
+    background: url(../../images/bg/bg_light-box.png) no-repeat;
+    overflow: hidden;
+}
+.box-modal>h2 { font-size: 35px; font-weight: normal; padding: 0 0 10px; text-align: right; line-height: normal; margin: 0;}
+.box-modal>h2 span {
+    display: block;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.box-aboutus p {
+    font-size: 13px;
+    padding: 0;
+}
+.box-aboutus div h2 {font-size: 24px; color: #1782be; padding-bottom: 0px; margin: 0; font-weight: normal;}
+.box-aboutus div p {padding: inherit;}
+.box-aboutus .form-actions {padding: 0;}
+.box-help-topics,
+.box-help-topics .scroll-pane {width: 100%; height: 313px;}
+.box-help-topics iframe {
+    border: none;
+    width: 100%;
+    height: 313px;
+}
+body.iframe {background-color: transparent;}
+
+.accordion-heading .accordion-toggle {
+    font-size: 18px;
+    color: #000;
+    background: url(../../images/bg/bg_head-accordion.png) left 50% no-repeat;
+    padding: 8px 20px;
+    margin-right: 30px;
+}
+.accordion-heading .accordion-toggle.active {background: url(../../images/bg/bg_head-accordion-in.png) left 50% no-repeat;}
+.accordion-heading .accordion-toggle:hover,
+.accordion-heading .accordion-toggle:focus {text-decoration: none; border: none;outline: none;}
+.accordion-group {border: none;}
+.accordion-inner {border: none; font-size: 13px; color: #555; padding: 5px 0;}
+/* ========= Modal END ========== */
+
+/* ========= Paing Added START ========== */
+.inputbtn img {vertical-align: middle;}
+.watermark {
+    color: #999 !important;
+}
+.box-loading-new {
+    width: 820px !important;
+    padding: 115px 90px 80px 90px;
+    background-color: #fff;
+    background-image: -moz-linear-gradient(top, #fff, #e0e0e0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e0e0e0));
+    background-image: -webkit-linear-gradient(top, #fff, #e0e0e0);
+    background-image: -o-linear-gradient(top, #fff, #e0e0e0);
+    background-image: linear-gradient(to bottom, #fff, #e0e0e0);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+.box-loading-new {text-align: center;}
+.box-loading-new h2 { font-size: 36px; font-weight: normal; margin: 0 0 15px; padding: 0;}
+.box-loading-new p { font-size: 14px;}
+
+
+.wrapper-tabcontent-result {
+    border-top: 1px solid #bfbfbf;
+    border-bottom: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    background: #fff;
+}
+
+.overlay {
+    background-color: #000;
+    bottom: 0;
+    display: none;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity = 50); /* IE7 & 8 */
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 199;
+}
+.wait
+{cursor:wait;}
+
+.box-loading-cvv {
+    width: 600px;
+    padding: 55px 75px 55px;
+    background-color: #fff;
+    background-image: -moz-linear-gradient(top, #fff, #e0e0e0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e0e0e0));
+    background-image: -webkit-linear-gradient(top, #fff, #e0e0e0);
+    background-image: -o-linear-gradient(top, #fff, #e0e0e0);
+    background-image: linear-gradient(to bottom, #fff, #e0e0e0);
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+.box-loading-cvv {text-align: center;}
+.box-loading-cvv h2 { font-size: 36px; font-weight: normal; margin: 0 0 15px; padding: 0;}
+.box-loading-cvv p { font-size: 14px;}
+
+.modal .cvv {
+
+    margin: -20px 0 0 3px;
+
+}
+/* ========= Paing Added END ========== */
+
+/* ========= Fix for some browsers START ========== */
+
+/*Fix firefox dot line*/
+:-moz-any-link:focus {
+    outline: 1px dotted invert;
+}
+:-moz-any-link:focus {
+    outline: none;
+}
+
+.payment-detail:before, .promotion-detail .detail:before,
+.payment-detail:after, .promotion-detail .detail:after{
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.payment-detail:after,
+.promotion-detail .detail:after {
+    clear: both;
+}
+/* Fixing the header in ie.
+.navbar .navbar-inner {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	background-color: #fff;
+	background-image: none;
+}*/
+/* ========= Fix for some browsers END ========== */
+
+/* ========= Promotion START ========== */
+.promotion-box {
+    float: left;
+    width: 270px;
+    position: relative;
+}
+.promotion-head {
+    width: 84px;
+    height: 83px;
+    background: url(../../images/bg/promotion.png) no-repeat;
+    position: absolute;
+    top: -18px;
+    right: -8px;
+    z-index: 999;
+}
+.promotion-head span {display: none;}
+.promotion-detail {
+    width: 270px;
+    min-height: 235px;
+}
+.promotion-detail .detail {
+    width: 100%;
+    padding-top: 10px;
+}
+.promotion-detail .detail .pic {
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+.promotion-detail .detail .content {
+    float: left;
+    width: 170px;
+    font-size: 11px;
+    padding: 7px 0 0;
+}
+.promotion-detail .detail .content h2 {
+    font-size: 11px;
+    margin: 0 0 7px;
+    line-height: inherit;
+    font-weight: normal;
+}
+
+/* Slide */
+.carousel-indicators li {
+    width: 13px;
+    height: 13px;
+    background: #e9e7e8;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.carousel-indicators li.active {
+    background: #8a8989;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.carousel-indicators {
+    bottom: 5px;
+    top: auto;
+    left: 50%;
+    margin-left: -20px;
+}
+/* ========= Promotion END ========== */
+
+/* ========= Other Logo START ========== */
+.logo-counter ul li {
+    float: left;
+    height: 35px;
+    list-style: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-indent: -9999px;
+    background-image: url(../../images/bg/bg_counter.png);
+    background-position: 0 0;
+    margin-right: 10px;
+}
+.logo-counter .eleven {width: 52px; background-position: 0 0;}
+.logo-counter .eleven.off { background-position: 0 -35px;}
+.logo-counter .tesco {width: 65px; background-position: -61px 0;}
+.logo-counter .tesco.off { background-position: -61px -35px;}
+.logo-counter .truemoney {width: 71px; background-position: -135px 0;}
+.logo-counter .truemoney.off { background-position: -135px -35px;}
+.logo-counter .payatpost {width: 119px; background-position: -216px 0;}
+.logo-counter .payatpost.off { background-position: -216px -35px;}
+.logo-counter .mpay {width: 53px; background-position: -343px 0;}
+.logo-counter .mpay.off { background-position: -343px -35px;}
+.logo-counter .tot {width: 53px; background-position: -405px 0;}
+.logo-counter .tot.off { background-position: -405px -35px;}
+.logo-counter .bigc {width: 53px; background-position: -468px 0;}
+.logo-counter .bigc.off { background-position: -468px -35px;}
+.logo-counter .familymart {width: 128px; background-position: -532px 0;}
+.logo-counter .familymart.off { background-position: -532px -35px;}
+.logo-counter .indomaret  {width: 128px; background-position: -532px 0;}
+.logo-counter .indomaret.off { background-position: -532px -35px;}
+
+*/
+.logo-counter {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.logo-counter ul {
+    float: left;
+    margin-left: 0px;
+}
+.logo-counter ul li {
+    float: left;
+    height: 35px;
+    list-style: none;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-indent: -9999px;
+    /*background-image: url(../../images/bg/bg_counter.png);*/
+    background-position: 0 0;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+
+
+}
+.logo-counter .agentlogo { background-position: 0 0;  }
+.logo-counter .agentlogo.off { background-position: 0 -35px;}
+.logo-bank .scb { width: 109px; background-position: 0 0;}
+.logo-bank .scb.off { background-position: 0 -37px;}
+.logo-bank .bay {width: 150px; background-position: -120px 0;}
+.logo-bank .bay.off { background-position: -120px -37px;}
+.logo-bank .ktb {width: 124px; background-position: -278px 0;}
+.logo-bank .ktb.off { background-position: -278px -37px;}
+.logo-bank .uob {width: 80px; background-position: -413px 0;}
+.logo-bank .uob.off { background-position: -413px -37px;}
+.logo-bank .tmb {width: 79px; background-position: -506px 0;}
+.logo-bank .tmb.off { background-position: -506px -37px;}
+.logo-bank .bbl {width: 129px; background-position: -597px 0;}
+.logo-bank .bbl.off { background-position: -597px -37px;}
+.logo-bank .kbank {width: 128px; background-position: -738px 0;}
+.logo-bank .kbank.off { background-position: -738px -37px;}
+.logo-bank .biiva {width: 128px; background-position: -738px 0;}
+.logo-bank .biiva.off { background-position: -738px -37px;}
+.logo-bank .bank_bca {width: 128px; background-position: -738px 0;}
+.logo-bank .bank_bca.off { background-position: -738px -37px;}
+.logo-bank .bank_mandiri {width: 128px; background-position: -738px 0;}
+.logo-bank .bank_mandiri.off { background-position: -738px -37px;}
+.logo-bank .bank_other {width: 128px; background-position: -738px 0;}
+.logo-bank .bank_other.off { background-position: -738px -37px;}
+
+.others {
+    cursor: pointer;
+}
+/* ========= Other Logo END ========== */
+
+/* ========= Label error START ========== */
+
+label.error {
+    display: none;
+    width: 20px;
+    height: 20px;
+    cursor: default;
+    background: url(../../images/bg/bg_error.png) center bottom no-repeat;
+    text-indent: -9999px;
+    vertical-align: middle;
+    display:inline-block;
+    margin-left:4px;
+}
+label.valid {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: url(../../images/bg/bg_valid.png) center bottom no-repeat;
+    text-indent: -9999px;
+    vertical-align: middle;
+    cursor: default;
+    display:inline-block;
+}
+label.text-error {
+    display: block;
+    margin-top: -5px;
+    font-weight: normal;
+    color: red;
+    cursor: default;
+}
+.error input, .error select, .error textarea {
+    color: #b94a48;
+    border-color: #b94a48;
+    position: relative;
+}
+input.error, select.error, textarea.error
+{
+    color: #b94a48;
+    border-color: #b94a48;
+}
+.success label.valid { display: inline-block;}
+.error label.error { display: inline-block;}
+.error label.text-error { display: block;}
+/* ========= Label error END ========== */
+
+/* ========= Box Payment START ========== */
+.box-payment-readmore {
+    padding: 33px 20px 20px 140px;
+    border-top: 1px #ccc solid;
+    background: url(../../images/bg/bg_succesfull.png) 33px 30px no-repeat;
+}
+.box-payment-readmore .checkbox {padding-left: 0;}
+.box-payment-readmore .checkbox label {
+    font-size: 16px;
+    line-height: normal;
+    margin: 0 0 5px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 28px;
+}
+.box-payment-readmore .checkbox input[type="checkbox"] {
+    display: none;
+}
+.box-payment-readmore .checkbox label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #71cd50;
+    padding: 1px;
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+}
+.box-payment-readmore input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #29b202;
+    text-align: center;
+    line-height: 15px;
+}
+
+.box-payment-fail  {
+    padding: 33px 20px 20px 140px;
+    border-top: 1px #ccc solid;
+    background: url(../../images/bg/bg_fail.png) 33px 30px no-repeat;
+}
+.box-payment-fail h2 {
+    font-size: 16px;
+    line-height: normal;
+    padding: 2px 0 0 0px;
+    margin: 0 0 5px;
+    color: #c92718;
+}
+.box-what-save {
+    width: 350px;
+    margin-left: 90px;
+}
+.box-what-save h2 {
+    font-size: 30px;
+    font-weight: normal;
+    background: url(../../images/bg/bg_safe.png) no-repeat;
+    padding: 0 0 0 30px;
+    line-height: normal;
+}
+.box-what-save p {text-indent: 10px; font-size: 13px;}
+.box-what-save .more {text-indent: 0; font-size: 14px; padding-top: 20px}
+
+.help-inline {font-size: 12px;}
+.text-show {font-size: 16px;}
+.text-show b {color: #0086b9; font-style: italic;}
+.text-show span {color: #3a3a3a;}
+/* ========= Box Payment END ========== */
+
+/* ========= Print START ========== */
+.wrapper-printpage {
+    width: 1290px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.wrapper-printpage .box-control {
+    float: left;
+    width: 274px;
+    border: 1px solid #c5c5c5;
+    background-color: #fefefe;
+    background-image: -moz-linear-gradient(top, #fefefe, #e5e5e5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top, #fefefe, #e5e5e5);
+    background-image: -o-linear-gradient(top, #fefefe, #e5e5e5);
+    background-image: linear-gradient(to bottom, #fefefe, #e5e5e5);
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    text-align: center;
+}
+.wrapper-printpage .box-control div {
+    background: url(../../images/bg/bg_shadowbox-top.png) top center no-repeat;
+    padding: 34px 0;
+}
+.wrapper-printpage .box-control div h2 {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 15px;
+}
+.wrapper-printpage .box-control div p { padding: 0 30px;}
+.wrapper-printpage .box-print {
+    float: right;
+    width: 1000px;
+}
+.wrapper-printpage .box-print .box-print-wrapper {
+}
+/* ========= Print END ========== */
+
+/* ========= Button START ========== */
+.modal .close {
+    background: #666;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    padding: 5px 9px;
+    margin: -10px 0 0 -20px;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    position: relative;
+    z-index: 999;
+}
+.modal .close:hover,
+.modal .close:focus {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.btn {
+    height: 25px !important;
+    line-height: 25px;
+}
+.btn img {vertical-align: middle;}
+.btn-primary {
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #00bc08;
+    background-image: -moz-linear-gradient(top, #00bc08, #039502);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00bc08), to(#039502));
+    background-image: -webkit-linear-gradient(top, #00bc08, #039502);
+    background-image: -o-linear-gradient(top, #00bc08, #039502);
+    background-image: linear-gradient(to bottom, #00bc08, #039502);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00bc08', endColorstr='#ff039502', GradientType=0);
+    border-color: #10c713 #016b00 #016300;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #0044cc;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+    color: #ffffff;
+    background-color: #039502;
+    *background-color: #039502;
+}
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #039502;
+}
+.fix-btn {
+    background-color: #01a802;
+    background-image: -moz-linear-gradient(top, #01a802, #007000);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#01a802), to(#007000));
+    background-image: -webkit-linear-gradient(top, #01a802, #007000);
+    background-image: -o-linear-gradient(top, #01a802, #007000);
+    background-image: linear-gradient(to bottom, #01a802, #007000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff01a802', endColorstr='#ff007000', GradientType=0);
+}
+.fix-btn:hover {
+    background-position: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    background-color: #01a802;
+    background-image: -moz-linear-gradient(top, #01a802, #007000);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#01a802), to(#007000));
+    background-image: -webkit-linear-gradient(top, #01a802, #007000);
+    background-image: -o-linear-gradient(top, #01a802, #007000);
+    background-image: linear-gradient(to bottom, #01a802, #007000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff01a802', endColorstr='#ff007000', GradientType=0);
+}
+.fix-btn img { }
+/* ========= Button END ========== */
+
+
+/* ========= Text START ========== */
+h2.success {font-size: 24px; font-weight: normal; color: #7cbc1e;}
+h2.error {font-size: 24px; font-weight: normal; color: #ca2718;}
+
+/* textarea */
+textarea {border: 1px solid #cccccc;}
+.flex-text-wrap {
+    position: relative;
+    *zoom: 1;
+}
+textarea,
+.flex-text-wrap {
+    outline: 0;
+    margin: 0;
+}
+.flex-text-wrap textarea,
+.flex-text-wrap pre {
+    white-space: pre-wrap;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *white-space: pre;
+    *word-wrap: break-word;
+}
+.flex-text-wrap textarea {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    /* IE7 box-sizing fudge factor */
+    *height: 94%;
+    *width: 94%;
+}
+.flex-text-wrap pre {
+    display: block;
+    visibility: hidden;
+}
+
+
+.scroll-pane {width: 700px; height: 313px;}
+.jspContainer {
+    overflow: hidden;
+    position: relative;
+}
+.jspContaine:focus,.scroll-pane:focus {outline: none;}
+.jspPane {position: absolute;}
+.jspVerticalBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 100%;
+    background: url(../../images/bg/bg_scroll-track.png) repeat-y 50% 0;
+}
+.jspHorizontalBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: red;
+}
+.jspVerticalBar *,
+.jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+
+.jspCap {display: none;}
+.jspHorizontalBar .jspCap {
+    float: left;
+}
+.jspTrack {
+    position: relative;
+}
+.jspDrag {
+    height: 52px !important;
+    background: url(../../images/bg/bg_scroll-d.png) no-repeat 50% 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+.jspArrow {
+    background: #50506d;
+    text-indent: -20000px;
+    display: block;
+    cursor: pointer;
+}
+.jspArrow.jspDisabled {
+    cursor: default;
+    background: #80808d;
+}
+.jspVerticalBar .jspArrow {
+    height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+    width: 16px;
+    float: left;
+    height: 100%;
+}
+.jspVerticalBar .jspArrow:focus {
+    outline: none;
+}
+.jspCorner {
+    background: #eeeef4;
+    float: left;
+    height: 100%;
+}
+/* ========= Text END ========== */
+
+/* ========= Other START ========== */
+.icn-next {
+    margin-top:-3px;
+}
+
+.icn-back {
+}
+
+.ippImage {
+    height:85px;
+    /*width:200px;*/
+}
+
+.innerTerms {
+    text-align:left;
+}
+
+
+
+.mpu-button {
+    padding-left: 172px;
+    padding-top: 12px;
+    background: url(../../images/logo-mpu.png) 0 0 no-repeat;
+    margin: 10px 0 20px;
+}
+
+.mpu-button a {
+    display: block;
+    width: 161px;
+    height: 51px;
+    background: url(../../images/bg/bg_pay-mpu.png) 0 0 no-repeat;
+    cursor: pointer;
+    padding: 11px 25px;
+    box-sizing: border-box;
+}
+
+.mpu-button a span {
+    font-size: 11pt;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mpu-button a:hover {
+    text-decoration: none;
+}
+.icn-OR {
+    background-color: #666666;
+    color: #FFFFFF;
+    padding: 5px;
+    border-radius: 5px;
+    font-style: normal;
+}
+
+#divCCOptions
+{
+    width: 500px;
+}
+
+#CCImage
+{
+    width: 180px;
+}
+
+.icn-payWith {
+    height: 30px;
+    vertical-align: middle;
+    padding-left : 6px;
+    display: inline;
+    /*font-size: 14px;
+    font-weight: 300;*/
+}
+
+/*
+label.error {
+	font-weight: bold;
+	color: red;
+	padding: 2px 8px;
+    cursor: default;
+	margin-top: -5px;
+}
+label.valid {
+	width: 24px;
+	height: 24px;
+	background: url(../../images/bg/bg_valid.png) center 10px no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+
+}
+label.text-error {
+	display: none;
+	margin-top: -5px;
+	font-weight: bold;
+	color: red;
+	cursor: default;
+}
+.error input, .error select, .error textarea {
+	color: #b94a48;
+	border-color: #b94a48;
+	position: relative;
+}
+input.error, select.error, textarea.error
+{
+    color: #b94a48;
+	border-color: #b94a48;
+}
+.success label.valid { display: inline-block;}
+.error label.error { display: inline-block;
+
+}
+.error label.text-error { display: block;}
+   */
+/* ========= Other END ========== */
+
+a.psp{
+    text-decoration: none;
+}
+
+a.psp:hover{
+    padding-left: 2px;
+}
+
+a.psp img{
+    margin-left: 8px;
+}
